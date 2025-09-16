@@ -7,17 +7,40 @@ body {
     color: #f0f0f0;
 }
 
-/* ---------- Cabeçalho ---------- */
+/* ---------- Cabeçalho e Navegação ---------- */
 header {
-    background: #dd0606;
-    color: white;
+    background: #ffffff;
+    color: #000;
     text-align: center;
     padding: 30px 15px;
-    text-shadow: 0 0 10px #050303;
+    text-shadow: none; /* Removido para legibilidade */
+}
+
+header h1 {
+    margin: 0;
+}
+
+.main-nav {
+    margin-top: 15px;
+    display: flex;
+    justify-content: center;
+    gap: 25px;
+}
+
+.main-nav a {
+    color: #000;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 1.1rem;
+    transition: color 0.3s ease;
+}
+
+.main-nav a:hover {
+    color: #007bff;
 }
 
 /* ---------- Seções ---------- */
-.sobre, .projetos, .contato {
+.sobre, .projetos, .contato, .habilidades {
     padding: 20px;
     max-width: 1100px;
     margin: auto;
@@ -28,8 +51,48 @@ h2 {
     padding-left: 10px;
     margin-bottom: 15px;
     font-size: 1.8rem;
-    color: #0042f8;
-   
+    color: #007bff;
+}
+
+/* ---------- Sobre Mim (com foto de perfil) ---------- */
+.foto-perfil {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    display: block;
+    margin: 0 auto 20px auto;
+    border: 3px solid #007bff;
+    box-shadow: 0 0 10px rgba(0, 123, 255, 0.5);
+}
+
+/* ---------- Habilidades ---------- */
+.habilidades {
+    text-align: center;
+}
+
+.habilidades-container {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 30px;
+    margin-top: 20px;
+}
+
+.habilidade {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.habilidade img {
+    width: 60px;
+    height: 60px;
+    margin-bottom: 5px;
+    transition: transform 0.3s ease;
+}
+
+.habilidade img:hover {
+    transform: scale(1.1);
 }
 
 /* ---------- Carrossel ---------- */
@@ -72,7 +135,7 @@ h2 {
 
 .card:hover {
     transform: translateY(-5px);
-    box-shadow: 0 6px 20px rgba(0,0,0,1), 0 0 15px #00ffb3, 0 0 25px #007bff;
+    box-shadow: 0 6px 20px rgba(0,0,0,1), 0 0 15px #007bff, 0 0 25px #007bff;
 }
 
 .card img {
@@ -86,7 +149,7 @@ h2 {
 
 .card img:hover {
     transform: scale(1.05);
-    box-shadow: 0 0 10px #00ff88, 0 0 15px #00ff88;
+    box-shadow: 0 0 10px #007bff, 0 0 15px #007bff;
 }
 
 .card a {
@@ -102,7 +165,7 @@ h2 {
 }
 
 .card a:hover {
-    background: #00ff9d;
+    background: #fff;
     color: #000;
     transform: scale(1.05);
 }
@@ -114,14 +177,13 @@ h2 {
     transform: translateY(-50%);
     background: rgba(0,0,0,0.6);
     border: none;
-    color: #002fff;
+    color: #007bff;
     font-size: 2rem;
     cursor: pointer;
     padding: 5px 12px;
     border-radius: 50%;
     z-index: 10;
     transition: all 0.3s ease;
-    
 }
 
 .carousel-btn:hover {
@@ -135,6 +197,24 @@ h2 {
 
 .right-btn {
     right: 5px;
+}
+
+/* ---------- Contato e Redes Sociais ---------- */
+.social-links {
+    margin-top: 20px;
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+}
+
+.social-links img {
+    width: 40px;
+    height: 40px;
+    transition: transform 0.3s ease;
+}
+
+.social-links a:hover img {
+    transform: scale(1.1);
 }
 
 /* ---------- Rodapé ---------- */
@@ -156,6 +236,11 @@ footer {
 
     h2 {
         font-size: 1.4rem;
+    }
+
+    .main-nav {
+        flex-direction: column;
+        gap: 10px;
     }
 
     .card {
