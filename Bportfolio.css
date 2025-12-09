@@ -204,19 +204,36 @@ h2 {
     margin-top: 20px;
     display: flex;
     justify-content: center;
-    gap: 20px;
+    /* Aumentamos um pouco o gap para acomodar o texto */
+    gap: 30px; 
+}
+
+/* Novo Estilo: torna o link um container flexível */
+.social-links a {
+    display: flex; 
+    align-items: center; /* Alinha o ícone e o texto verticalmente */
+    gap: 8px; /* Espaçamento entre o ícone e o texto */
+    text-decoration: none; /* Remove sublinhado */
+    color: #f0f0f0; /* Cor do texto */
+    font-size: 1.1rem;
+    transition: color 0.3s ease;
+}
+
+.social-links a:hover {
+    color: #007bff; /* Efeito hover no texto */
 }
 
 .social-links img {
-    width: 40px;
-    height: 40px;
+    /* Ajustamos o ícone para ficar mais harmonioso com o texto */
+    width: 30px; 
+    height: 30px;
     transition: transform 0.3s ease;
 }
 
 .social-links a:hover img {
+    /* Mantém o efeito hover no ícone */
     transform: scale(1.1);
 }
-
 /* ---------- Rodapé ---------- */
 footer {
     text-align: center;
